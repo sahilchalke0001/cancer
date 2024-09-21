@@ -6,6 +6,7 @@ from sklearn.metrics import accuracy_score, classification_report
 import pickle
 
 
+
 def create_model(data):
   X = data.drop(['diagnosis'], axis=1)##predict
   y = data['diagnosis']##traget
@@ -33,7 +34,8 @@ def create_model(data):
 
 
 def get_clean_data():
-  data = pd.read_csv(r"data\data.csv")
+  data_path = os.path.join(os.getcwd(), "data/data.csv")
+  data = pd.read_csv(data_path)
 
   data = data.drop(['id'],axis=1)  
   data = data.drop(['Unnamed: 32'],axis = 1)
