@@ -33,7 +33,7 @@ def create_model(data):
 
 
 def get_clean_data():
-  data = pd.read_csv(r"/absolute/path/to/data.csv")
+  data=pd.read_csv(r"C:\Users\SAHIL\Desktop\Breast_cancer\data\data.csv")
 
   data = data.drop(['id'],axis=1)  
   data = data.drop(['Unnamed: 32'],axis = 1)
